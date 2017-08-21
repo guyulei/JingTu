@@ -1,4 +1,4 @@
-package com.guyulei.jingtu.ui.fragment;
+package com.guyulei.jingtu.ui.fragment.homefragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,14 +14,14 @@ import com.guyulei.jingtu.R;
  * Created by A on 2017/8/21.
  */
 
-public class Tab4Fragment extends Fragment {
+public class Tab3Fragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
     private int mPage;
 
-    public static Tab4Fragment newInstance(int page) {
+    public static Tab3Fragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
-        Tab4Fragment toolFragment = new Tab4Fragment();
+        Tab3Fragment toolFragment = new Tab3Fragment();
         toolFragment.setArguments(args);
         return toolFragment;
     }

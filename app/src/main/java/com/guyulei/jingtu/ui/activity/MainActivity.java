@@ -21,10 +21,10 @@ import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.guyulei.jingtu.R;
 import com.guyulei.jingtu.bean.TabEntity;
-import com.guyulei.jingtu.ui.fragment.Tab2Fragment;
-import com.guyulei.jingtu.ui.fragment.Tab3Fragment;
-import com.guyulei.jingtu.ui.fragment.Tab4Fragment;
-import com.guyulei.jingtu.ui.fragment.ToolFragment;
+import com.guyulei.jingtu.ui.fragment.homefragment.Tab2Fragment;
+import com.guyulei.jingtu.ui.fragment.homefragment.Tab3Fragment;
+import com.guyulei.jingtu.ui.fragment.homefragment.Tab4Fragment;
+import com.guyulei.jingtu.ui.fragment.homefragment.ToolFragment;
 import com.guyulei.jingtu.utils.ToastUtils;
 
 import java.util.ArrayList;
@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         HomePageAdapter homePageAdapter = new HomePageAdapter(getSupportFragmentManager());
         mViewpager.setAdapter(homePageAdapter);
+        mViewpager.setOffscreenPageLimit(4);
         mTablayout.setTabData(tabEntitys);
         //
         mViewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
