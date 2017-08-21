@@ -14,16 +14,16 @@ import com.guyulei.jingtu.R;
  * Created by A on 2017/8/21.
  */
 
-public class PageFragment extends Fragment {
+public class Tab4Fragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
     private int mPage;
 
-    public static PageFragment newInstance(int page) {
+    public static Tab4Fragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
-        PageFragment pageFragment = new PageFragment();
-        pageFragment.setArguments(args);
-        return pageFragment;
+        Tab4Fragment toolFragment = new Tab4Fragment();
+        toolFragment.setArguments(args);
+        return toolFragment;
     }
 
     @Override

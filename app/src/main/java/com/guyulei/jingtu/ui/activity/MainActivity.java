@@ -1,4 +1,4 @@
-package com.guyulei.jingtu.ui;
+package com.guyulei.jingtu.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,7 +21,10 @@ import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.guyulei.jingtu.R;
 import com.guyulei.jingtu.bean.TabEntity;
-import com.guyulei.jingtu.ui.fragment.PageFragment;
+import com.guyulei.jingtu.ui.fragment.Tab2Fragment;
+import com.guyulei.jingtu.ui.fragment.Tab3Fragment;
+import com.guyulei.jingtu.ui.fragment.Tab4Fragment;
+import com.guyulei.jingtu.ui.fragment.ToolFragment;
 import com.guyulei.jingtu.utils.ToastUtils;
 
 import java.util.ArrayList;
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     ArrayList<Fragment>        fragments  = new ArrayList<>();
     ArrayList<CustomTabEntity> tabEntitys = new ArrayList<>();
-    private String tabTitles[]      = new String[]{"tab1", "tab2", "tab3", "tab4"};
+    private String tabTitles[]      = new String[]{"工具", "tab2", "tab3", "tab4"};
     private int[]  mIconUnselectIds = {R.mipmap.home1, R.mipmap.home3, R.mipmap.home5, R.mipmap.home7};
     private int[]  mIconSelectIds   = {R.mipmap.home2, R.mipmap.home4, R.mipmap.home6, R.mipmap.home8};
 
@@ -73,8 +76,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
         //
+        fragments.add(ToolFragment.newInstance(1));
+        fragments.add(Tab2Fragment.newInstance(2));
+        fragments.add(Tab3Fragment.newInstance(3));
+        fragments.add(Tab4Fragment.newInstance(4));
         for (int i = 0; i < tabTitles.length; i++) {
-            fragments.add(PageFragment.newInstance(i + 1));
             tabEntitys.add(new TabEntity(tabTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));
         }
         HomePageAdapter homePageAdapter = new HomePageAdapter(getSupportFragmentManager());
