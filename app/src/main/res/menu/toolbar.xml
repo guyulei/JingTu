@@ -13,7 +13,7 @@
         android:id="@+id/two"
         android:icon="@mipmap/ic_launcher"
         android:title="2two"
-        app:showAsAction="ifRoom">
+        app:showAsAction="never">
     </item>
 
     <item

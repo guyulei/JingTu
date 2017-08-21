@@ -6,11 +6,12 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.guyulei.jingtu.MainActivity">
+    tools:context="com.guyulei.jingtu.ui.MainActivity">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -21,12 +22,39 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         </android.support.v7.widget.Toolbar>
-    </FrameLayout>
 
-    <TextView
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </android.support.v4.view.ViewPager>
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:padding="5dp"
+            app:tl_iconHeight="25dp"
+            app:tl_iconWidth="25dp"
+            app:tl_indicator_height="0dp"
+            app:tl_textSelectColor="#2C97DE"
+            app:tl_textUnselectColor="#66000000"
+            app:tl_textsize="12sp"
+            app:tl_underline_height="0dp"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:text="guyulei"/>
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu">
+
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
